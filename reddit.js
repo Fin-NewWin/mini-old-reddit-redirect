@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name               Old Reddit Redirect
-// @description        Redirect to old reddit, forked from RandomUsername404
+// @name               Mini Old Reddit Redirect
+// @description        Redirect to old reddit trying to be minimum
 // @include            *://www.reddit.com/*
 // @exclude            *://www.reddit.com/poll/*
 // @exclude            *i.redd.it*
@@ -9,11 +9,13 @@
 // @author             Fin-NewWin
 // ==/UserScript==
 
-(function() {
-	if (window.location.pathname === "/media"){
-		window.location.replace(new URL(window.location.href).searchParams.get("url"))
-	} else {
-		// window.location.replace("https://old.reddit.com" + window.location.pathname + window.location.search);
-		top.location.replace("https://old.reddit.com");
-	}
+(function () {
+  if (window.location.pathname === "/media") {
+    window.location.replace(
+      new URL(window.location.href).searchParams.get("url"),
+    );
+  } else {
+    // window.location.replace("https://old.reddit.com" + window.location.pathname + window.location.search);
+    top.location.replace("https://old.reddit.com");
+  }
 })();
