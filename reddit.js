@@ -10,10 +10,10 @@
 // ==/UserScript==
 
 (function() {
-    if (window.location.pathname === "/media"){
-        window.location.replace(new URL(window.location.href).searchParams.get("url"))
-    } else {
-        // window.location.replace("https://old.reddit.com" + window.location.pathname + window.location.search);
+	if (window.location.pathname === "/media"){
+		window.location.replace(new URL(window.location.href).searchParams.get("url"))
+	} else {
+		// window.location.replace("https://old.reddit.com" + window.location.pathname + window.location.search);
 		top.location.replace("https://old.reddit.com");
-    }
+	}
 })();
